@@ -78,9 +78,8 @@
   }
 
   function init() {
-    var lang = "ja";
-    try { lang = localStorage.getItem(KEY) || "ja"; } catch (e) {}
-    apply(lang);
+    // Always start in Japanese on every page load (default language).
+    apply("ja");
 
     var btn = document.getElementById("langToggle");
     if (btn) {

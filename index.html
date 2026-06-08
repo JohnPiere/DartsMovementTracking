@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet" />
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-<link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet" href="css/styles.css?v=20260608b" />
 </head>
 <body>
 
@@ -244,6 +244,46 @@
     </div>
   </section>
 
+  <!-- ============ SCROLL TRUCK ============ -->
+  <section class="section truckscene" id="truckScene">
+    <div class="section__head section__head--center">
+      <p class="kicker reveal" data-reveal data-en="SCROLL TO OPEN">SCROLL · 荷台を開く</p>
+      <h2 class="reveal" data-reveal data-delay="80" data-en="Scroll — the truck turns &amp; opens up">スクロールでトラックが<br class="br-sp">振り向き、荷台が開く</h2>
+      <p class="section__sub reveal" data-reveal data-delay="140" data-en="As you scroll, the delivery truck turns to face you and its rear doors swing open, revealing the crates of fresh produce inside.">スクロールに合わせて配送トラックがこちらを向き、リアドアが開いて、中の新鮮な青果クレートが現れます。</p>
+    </div>
+    <div class="truckscene__viewport">
+      <div class="truck3d__shadow"></div>
+      <div class="truck3d__float">
+        <div class="truck3d" id="truck3d" aria-hidden="true">
+          <div class="t-face t-box t-box--left"></div>
+          <div class="t-face t-box t-box--right"></div>
+          <div class="t-face t-box t-box--top"></div>
+          <div class="t-face t-box t-box--bottom"></div>
+          <div class="t-face t-box t-box--front"></div>
+          <div class="t-inside">
+            <div class="t-icrate t-icrate--tl"></div>
+            <div class="t-icrate t-icrate--tr"></div>
+            <div class="t-icrate t-icrate--bl"></div>
+            <div class="t-icrate t-icrate--br"></div>
+          </div>
+          <div class="t-hinge t-hinge--l"><div class="t-door"></div></div>
+          <div class="t-hinge t-hinge--r"><div class="t-door"></div></div>
+          <div class="t-cab">
+            <div class="t-face t-cab__front"></div>
+            <div class="t-face t-cab__top"></div>
+            <div class="t-face t-cab__left"></div>
+            <div class="t-face t-cab__right"></div>
+          </div>
+          <span class="t-wheel t-wheel--fr"></span>
+          <span class="t-wheel t-wheel--rr"></span>
+          <span class="t-wheel t-wheel--fl"></span>
+          <span class="t-wheel t-wheel--rl"></span>
+        </div>
+      </div>
+    </div>
+    <p class="truckscene__hint" data-en="↑ scroll up &amp; down to drive the animation">↑ スクロールで動きます</p>
+  </section>
+
   <!-- ============ STATS ============ -->
   <section class="section stats" id="stats">
     <div class="stats__inner">
@@ -252,7 +292,7 @@
         <span class="stat__label" data-en="Delivery vehicles">配送車両</span>
       </div>
       <div class="stat reveal" data-reveal data-delay="80">
-        <span class="stat__num" data-count="3" data-suffix="つの約束">0</span>
+        <span class="stat__num" data-count="3" data-suffix="">0</span>
         <span class="stat__label" data-en="Fresh · Safe · Secure">新鮮・安心・安全</span>
       </div>
       <div class="stat reveal" data-reveal data-delay="160">
@@ -329,7 +369,7 @@
   </defs>
 </svg>
 
-<script src="js/i18n.js"></script>
-<script src="js/main.js"></script>
+<script src="js/i18n.js?v=20260608b"></script>
+<script src="js/main.js?v=20260608b"></script>
 </body>
 </html>
