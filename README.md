@@ -32,29 +32,30 @@ Just double-click **`index.html`** — it runs in any modern browser, fully offl
 > fonts offline. No npm, no bundler, no server required. To serve it instead:
 > `python3 -m http.server` then open <http://localhost:8000>.
 
-## 📱 View it now from your phone (no PC needed)
-The repo is public, so you can preview the pushed branch instantly:
+## 📱 Live site
+Published via GitHub Pages from `main` (`.github/workflows/static.yml`):
 
-**htmlpreview** (instant, zero setup):
-```
-https://htmlpreview.github.io/?https://raw.githubusercontent.com/JohnPiere/DartsMovementTracking/claude/modern-website-3d-animations-IOhpQ/sendai-seika-modern/index.html
-```
-
-For a permanent, fast URL, enable GitHub Pages for this content (Settings →
-Pages) or ask me to add a Pages deploy workflow.
+**https://johnpiere.github.io/DartsMovementTracking/**
 
 ## 📁 Structure
 ```
-sendai-seika-modern/
-├── index.html            ← the site
+.
+├── index.html            ← the site (home)
+├── company.html          ← 組合概要
+├── delivery.html         ← 共同配送事業
+├── fuel.html             ← 給油事業
+├── members.html          ← 組合員一覧
 ├── css/styles.css        ← styles, 3D, animations
 ├── js/main.js            ← scroll motion, parallax, counters, canvas
+├── js/i18n.js            ← EN / 日本語 toggle
 ├── assets/favicon.svg
-├── source-export/        ← reconstructed source content + scrape notes
-│   ├── SOURCE_NOTES.md   ← why original images couldn't be fetched + how to mirror
-│   └── content.md        ← reconstructed content map of ssn.or.jp
-└── README.md
+└── source-export/        ← reconstructed source content + scrape notes
+    ├── SOURCE_NOTES.md   ← why original images couldn't be fetched + how to mirror
+    └── content.md        ← reconstructed content map of ssn.or.jp
 ```
+
+> The previous darts-tracker software that lived in this repo has been removed
+> in favour of this site (it remains on the owner's local backup).
 
 ## ⚠️ Note on the original assets
 The original site's text and photos could **not** be downloaded from the build
