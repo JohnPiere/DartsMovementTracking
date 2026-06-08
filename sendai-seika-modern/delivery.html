@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja" data-en-title="Joint Delivery ｜ Sendai Central Market Produce Cooperative">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0a1f14" />
+<title>共同配送事業 ｜ 仙台中央市場青果協同組合</title>
+<meta name="description" content="仙台中央市場青果協同組合の共同配送事業。100%出資の子会社（株）仙台中央卸売市場配送センターが約46台の車両で共同配送・市内混載・チャーター便を運行します。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<canvas id="bgCanvas" class="bg-canvas" aria-hidden="true"></canvas>
+<div class="aurora" aria-hidden="true"><span class="aurora__blob aurora__blob--1"></span><span class="aurora__blob aurora__blob--2"></span><span class="aurora__blob aurora__blob--3"></span></div>
+
+<header class="nav" id="nav">
+  <a class="nav__brand" href="index.html#top" aria-label="仙台中央市場青果協同組合 トップへ">
+    <span class="nav__logo" aria-hidden="true"><svg viewBox="0 0 40 40" width="34" height="34"><use href="#leafmark"/></svg></span>
+    <span class="nav__brand-text"><strong data-en="Sendai Central Produce">仙台中央市場青果</strong><small data-en="Cooperative">協同組合</small></span>
+  </a>
+  <nav class="nav__links" aria-label="メインメニュー">
+    <a href="company.html" data-en="Overview">組合概要</a>
+    <a href="index.html#business" data-en="Business">事業内容</a>
+    <a href="delivery.html" data-en="Delivery">共同配送</a>
+    <a href="fuel.html" data-en="Fuel">給油事業</a>
+    <a href="members.html" data-en="Members">組合員</a>
+    <a href="index.html#contact" class="nav__cta" data-en="Contact">お問い合わせ</a>
+    <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch to English">EN</button>
+  </nav>
+  <button class="nav__burger" id="navBurger" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div>
+      <p class="crumbs"><a href="index.html#top">HOME</a> / <span>DELIVERY</span></p>
+      <p class="page-hero__eyebrow" data-en="BUSINESS 01 · DELIVERY">事業 01 · 配送</p>
+      <h1 data-en="Joint <br>Delivery">共同配送事業</h1>
+      <p data-en="Run by our wholly owned subsidiary, the Sendai Central Wholesale Market Delivery Center, with about 46 vehicles serving joint, mixed-load and charter delivery.">100％出資の子会社（株）仙台中央卸売市場配送センターが運営。約46台の車両で、共同配送・市内混載配送・チャーター便に対応します。</p>
+    </div>
+    <div class="page-hero__art" aria-hidden="true">
+      <div class="truck-stage">
+        <div class="truck">
+          <div class="truck__box"><span class="s f"></span><span class="s b"></span><span class="s l"></span><span class="s r"></span><span class="s t"></span></div>
+          <div class="truck__cab"><span class="s f"></span><span class="s r"></span><span class="s t"></span></div>
+          <span class="truck__wheel a"></span><span class="truck__wheel b"></span>
+          <span class="truck__wheel w2 a2"></span><span class="truck__wheel w2 b2"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section stats">
+    <div class="stats__inner">
+      <div class="stat reveal" data-reveal><span class="stat__num" data-count="46" data-suffix="台">0</span><span class="stat__label" data-en="Vehicles in the fleet">配送車両</span></div>
+      <div class="stat reveal" data-reveal data-delay="80"><span class="stat__num" data-count="100" data-suffix="%">0</span><span class="stat__label" data-en="Owned subsidiary">出資の子会社運営</span></div>
+      <div class="stat reveal" data-reveal data-delay="160"><span class="stat__num" data-count="3" data-suffix="便種">0</span><span class="stat__label" data-en="Delivery service types">配送メニュー</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head">
+      <p class="kicker reveal" data-reveal data-en="SERVICES">SERVICES · 配送メニュー</p>
+      <h2 class="reveal" data-reveal data-delay="80" data-en="Three ways we deliver">3つの配送スタイル</h2>
+    </div>
+    <ul class="focus__features">
+      <li class="feature reveal" data-reveal data-delay="80"><span class="feature__no">01</span><div><h3 data-en="Joint delivery">共同配送</h3><p data-en="Consolidating multiple shippers' goods onto shared routes for efficient, lower-cost delivery.">複数の荷主の商品をまとめ、共同のルートで効率よく・低コストにお届けします。</p></div></li>
+      <li class="feature reveal" data-reveal data-delay="140"><span class="feature__no">02</span><div><h3 data-en="In-city mixed-load delivery">市内混載配送</h3><p data-en="Mixed-load runs across the city keep small and frequent orders flowing smoothly.">市内向けの混載便で、小口・多頻度の注文もスムーズに循環させます。</p></div></li>
+      <li class="feature reveal" data-reveal data-delay="200"><span class="feature__no">03</span><div><h3 data-en="Charter delivery">チャーター便</h3><p data-en="Dedicated charter vehicles for volume, urgent or special transport needs.">まとまった量や急ぎ・特別な輸送には、専用のチャーター便で対応します。</p></div></li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <div class="section__head">
+      <p class="kicker reveal" data-reveal data-en="OPERATOR">OPERATOR · 運営会社</p>
+      <h2 class="reveal" data-reveal data-delay="80" data-en="The Delivery Center">配送センター</h2>
+    </div>
+    <div class="prose reveal" data-reveal data-delay="120">
+      <p data-en="Our joint delivery business is operated by <strong>Sendai Central Wholesale Market Delivery Center Co., Ltd.</strong>, a wholly owned (100%) subsidiary of the cooperative. With a fleet of roughly <strong>46 vehicles</strong>, it carries the market's fresh produce to stores and buyers — fresh, safe and on time."><strong>（株）仙台中央卸売市場配送センター</strong>は、当組合が100％出資する子会社です。約<strong>46台</strong>の車両を擁し、市場の新鮮な青果を店舗・実需者のもとへ、鮮度そのままに・時間どおりにお届けします。</p>
+      <p data-en="Tightly linked with our storage and in-market transport function, the center makes the whole chain — from the market floor to the customer's door — a single, seamless flow.">貯蔵保管・場内運搬の機能と密接に連携し、市場のセリ場からお客様の元までを、ひとつの切れ目のない流れにします。</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__brand"><span class="nav__logo" aria-hidden="true"><svg viewBox="0 0 40 40" width="30" height="30"><use href="#leafmark"/></svg></span>
+      <div><strong data-en="Sendai Central Market Produce Cooperative">仙台中央市場青果協同組合</strong><p data-en="Delivering fresh, safe and secure produce.">新鮮！安心！安全！な青果をお届けします。</p></div></div>
+    <nav class="footer__nav" aria-label="フッターメニュー">
+      <a href="company.html" data-en="Overview">組合概要</a><a href="delivery.html" data-en="Delivery">共同配送</a><a href="fuel.html" data-en="Fuel">給油事業</a><a href="members.html" data-en="Members">組合員</a><a href="index.html#contact" data-en="Contact">お問い合わせ</a>
+    </nav>
+  </div>
+  <div class="footer__bottom"><small>© <span id="year"></span> 仙台中央市場青果協同組合 — Modern redesign concept.</small><small data-en="Built dependency-free · 3D &amp; scroll motion">Built dependency-free · 3D &amp; scroll motion</small></div>
+</footer>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="leafmark" viewBox="0 0 40 40">
+    <path d="M20 3C11 9 6 16 6 25c0 7 5 12 14 12s14-5 14-12C34 16 29 9 20 3Z" fill="url(#lg1)"/>
+    <path d="M20 8c0 12 0 20 0 27" stroke="#0a3d1f" stroke-width="2" fill="none" opacity=".55"/>
+    <path d="M20 18c4-3 7-3 10-2M20 26c-4-3-7-3-10-2" stroke="#0a3d1f" stroke-width="1.6" fill="none" opacity=".45"/>
+    <linearGradient id="lg1" x1="6" y1="3" x2="34" y2="37" gradientUnits="userSpaceOnUse"><stop stop-color="#7CFFB2"/><stop offset="1" stop-color="#16A34A"/></linearGradient>
+  </symbol>
+</defs></svg>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

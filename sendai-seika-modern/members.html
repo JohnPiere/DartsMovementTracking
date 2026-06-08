@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja" data-en-title="Members ｜ Sendai Central Market Produce Cooperative">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0a1f14" />
+<title>組合員一覧 ｜ 仙台中央市場青果協同組合</title>
+<meta name="description" content="仙台中央市場青果協同組合の組合員企業一覧。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<canvas id="bgCanvas" class="bg-canvas" aria-hidden="true"></canvas>
+<div class="aurora" aria-hidden="true"><span class="aurora__blob aurora__blob--1"></span><span class="aurora__blob aurora__blob--2"></span><span class="aurora__blob aurora__blob--3"></span></div>
+
+<header class="nav" id="nav">
+  <a class="nav__brand" href="index.html#top" aria-label="仙台中央市場青果協同組合 トップへ">
+    <span class="nav__logo" aria-hidden="true"><svg viewBox="0 0 40 40" width="34" height="34"><use href="#leafmark"/></svg></span>
+    <span class="nav__brand-text"><strong data-en="Sendai Central Produce">仙台中央市場青果</strong><small data-en="Cooperative">協同組合</small></span>
+  </a>
+  <nav class="nav__links" aria-label="メインメニュー">
+    <a href="company.html" data-en="Overview">組合概要</a>
+    <a href="index.html#business" data-en="Business">事業内容</a>
+    <a href="delivery.html" data-en="Delivery">共同配送</a>
+    <a href="fuel.html" data-en="Fuel">給油事業</a>
+    <a href="members.html" data-en="Members">組合員</a>
+    <a href="index.html#contact" class="nav__cta" data-en="Contact">お問い合わせ</a>
+    <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch to English">EN</button>
+  </nav>
+  <button class="nav__burger" id="navBurger" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div>
+      <p class="crumbs"><a href="index.html#top">HOME</a> / <span>MEMBERS</span></p>
+      <p class="page-hero__eyebrow" data-en="OUR MEMBERS">組合員</p>
+      <h1 data-en="Member <br>Companies">組合員一覧</h1>
+      <p data-en="The produce companies that make up the cooperative and bring fresh fruit and vegetables to the Sendai market every day.">仙台市場に毎日新鮮な青果を送り出す、組合を構成する青果企業のみなさまです。</p>
+    </div>
+    <div class="page-hero__art" aria-hidden="true">
+      <div class="motif">
+        <span class="motif__ring motif__ring--1"></span><span class="motif__ring motif__ring--2"></span><span class="motif__ring motif__ring--3"></span>
+        <span class="motif__core">🤝</span>
+        <span class="motif__sat motif__sat--1"></span><span class="motif__sat motif__sat--2"></span><span class="motif__sat motif__sat--3"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head">
+      <p class="kicker reveal" data-reveal data-en="MEMBERS">MEMBERS · 組合員企業</p>
+      <h2 class="reveal" data-reveal data-delay="80" data-en="Companies of the cooperative">組合を構成する企業</h2>
+    </div>
+    <div class="members-grid">
+      <article class="member reveal" data-reveal data-delay="40"><div class="member__avatar">仙</div><h3 data-en="Senka Co., Ltd.">株式会社仙果</h3><p data-en="Member company">組合員企業</p></article>
+      <article class="member reveal" data-reveal data-delay="100"><div class="member__avatar">や</div><h3 data-en="Yamataka Shoten Co., Ltd.">株式会社やま高商店</h3><p data-en="Member company">組合員企業</p></article>
+      <article class="member reveal" data-reveal data-delay="160"><div class="member__avatar">興</div><h3 data-en="Koyo Co., Ltd.">株式会社興陽</h3><p data-en="Member company">組合員企業</p></article>
+      <article class="member reveal" data-reveal data-delay="220"><div class="member__avatar">ま</div><h3 data-en="Marutomi Shoten Ltd.">有限会社まるとみ商店</h3><p data-en="Member company">組合員企業</p></article>
+    </div>
+    <p class="note reveal" data-reveal data-delay="120" data-en="Note: this is a partial list reconstructed from public references. The full, official member directory is published on the original site (memberlist pages on www.ssn.or.jp).">※ こちらは公開情報から再構成した一部の組合員リストです。正式な組合員名簿は元サイト（www.ssn.or.jp の memberlist 各ページ）に掲載されています。</p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__brand"><span class="nav__logo" aria-hidden="true"><svg viewBox="0 0 40 40" width="30" height="30"><use href="#leafmark"/></svg></span>
+      <div><strong data-en="Sendai Central Market Produce Cooperative">仙台中央市場青果協同組合</strong><p data-en="Delivering fresh, safe and secure produce.">新鮮！安心！安全！な青果をお届けします。</p></div></div>
+    <nav class="footer__nav" aria-label="フッターメニュー">
+      <a href="company.html" data-en="Overview">組合概要</a><a href="delivery.html" data-en="Delivery">共同配送</a><a href="fuel.html" data-en="Fuel">給油事業</a><a href="members.html" data-en="Members">組合員</a><a href="index.html#contact" data-en="Contact">お問い合わせ</a>
+    </nav>
+  </div>
+  <div class="footer__bottom"><small>© <span id="year"></span> 仙台中央市場青果協同組合 — Modern redesign concept.</small><small data-en="Built dependency-free · 3D &amp; scroll motion">Built dependency-free · 3D &amp; scroll motion</small></div>
+</footer>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="leafmark" viewBox="0 0 40 40">
+    <path d="M20 3C11 9 6 16 6 25c0 7 5 12 14 12s14-5 14-12C34 16 29 9 20 3Z" fill="url(#lg1)"/>
+    <path d="M20 8c0 12 0 20 0 27" stroke="#0a3d1f" stroke-width="2" fill="none" opacity=".55"/>
+    <path d="M20 18c4-3 7-3 10-2M20 26c-4-3-7-3-10-2" stroke="#0a3d1f" stroke-width="1.6" fill="none" opacity=".45"/>
+    <linearGradient id="lg1" x1="6" y1="3" x2="34" y2="37" gradientUnits="userSpaceOnUse"><stop stop-color="#7CFFB2"/><stop offset="1" stop-color="#16A34A"/></linearGradient>
+  </symbol>
+</defs></svg>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
