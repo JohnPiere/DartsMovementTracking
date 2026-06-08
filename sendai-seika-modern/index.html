@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" data-en-title="Sendai Central Market Produce Cooperative ｜ Storage & In-Market Transport">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,10 +14,8 @@
 </head>
 <body>
 
-<!-- ===== Scroll progress bar ===== -->
 <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-<!-- ===== Animated grain / aurora background ===== -->
 <canvas id="bgCanvas" class="bg-canvas" aria-hidden="true"></canvas>
 <div class="aurora" aria-hidden="true">
   <span class="aurora__blob aurora__blob--1"></span>
@@ -25,23 +23,23 @@
   <span class="aurora__blob aurora__blob--3"></span>
 </div>
 
-<!-- ===== Navigation ===== -->
+<!-- ===== Navigation (shared) ===== -->
 <header class="nav" id="nav">
   <a class="nav__brand" href="#top" aria-label="仙台中央市場青果協同組合 トップへ">
-    <span class="nav__logo" aria-hidden="true">
-      <svg viewBox="0 0 40 40" width="34" height="34"><use href="#leafmark"/></svg>
-    </span>
+    <span class="nav__logo" aria-hidden="true"><svg viewBox="0 0 40 40" width="34" height="34"><use href="#leafmark"/></svg></span>
     <span class="nav__brand-text">
-      <strong>仙台中央市場青果</strong>
-      <small>協同組合</small>
+      <strong data-en="Sendai Central Produce">仙台中央市場青果</strong>
+      <small data-en="Cooperative">協同組合</small>
     </span>
   </a>
   <nav class="nav__links" aria-label="メインメニュー">
-    <a href="#about">組合について</a>
-    <a href="#focus">貯蔵・運搬</a>
-    <a href="#business">事業内容</a>
-    <a href="#stats">数字で見る</a>
-    <a href="#contact" class="nav__cta">お問い合わせ</a>
+    <a href="company.html" data-en="Overview">組合概要</a>
+    <a href="#business" data-en="Business">事業内容</a>
+    <a href="delivery.html" data-en="Delivery">共同配送</a>
+    <a href="fuel.html" data-en="Fuel">給油事業</a>
+    <a href="members.html" data-en="Members">組合員</a>
+    <a href="#contact" class="nav__cta" data-en="Contact">お問い合わせ</a>
+    <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch to English">EN</button>
   </nav>
   <button class="nav__burger" id="navBurger" aria-label="メニューを開く" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -53,60 +51,45 @@
   <!-- ============ HERO ============ -->
   <section class="hero" id="hero">
     <div class="hero__copy">
-      <p class="hero__eyebrow reveal" data-reveal>SENDAI CENTRAL MARKET · FRESH PRODUCE</p>
+      <p class="hero__eyebrow reveal" data-reveal data-en="SENDAI CENTRAL MARKET · FRESH PRODUCE">SENDAI CENTRAL MARKET · FRESH PRODUCE</p>
       <h1 class="hero__title">
-        <span class="reveal" data-reveal data-delay="0">新鮮を、</span>
-        <span class="reveal grad" data-reveal data-delay="80">運び、守る。</span>
+        <span class="reveal" data-reveal data-delay="0" data-en="We move,">新鮮を、</span>
+        <span class="reveal grad" data-reveal data-delay="80" data-en="we protect freshness.">運び、守る。</span>
       </h1>
-      <p class="hero__lead reveal" data-reveal data-delay="160">
+      <p class="hero__lead reveal" data-reveal data-delay="160" data-en="Sendai Central Market Produce Cooperative runs the logistics backbone that keeps the market's fruit &amp; vegetables fresh — built around our <strong>storage &amp; in-market transport</strong> business.">
         仙台中央市場青果協同組合は、<strong>貯蔵保管・場内運搬事業</strong>を軸に、
         市場の青果物を鮮度そのままに届ける物流インフラを担っています。
       </p>
       <div class="hero__actions reveal" data-reveal data-delay="240">
-        <a href="#focus" class="btn btn--primary">貯蔵・運搬事業を見る <span aria-hidden="true">↓</span></a>
-        <a href="#business" class="btn btn--ghost">事業内容</a>
+        <a href="#focus" class="btn btn--primary" data-en="See storage &amp; transport <span aria-hidden=&quot;true&quot;>↓</span>">貯蔵・運搬事業を見る <span aria-hidden="true">↓</span></a>
+        <a href="#business" class="btn btn--ghost" data-en="Our business">事業内容</a>
       </div>
       <ul class="hero__pills reveal" data-reveal data-delay="320">
-        <li>新鮮</li><li>安心</li><li>安全</li>
+        <li data-en="FRESH">新鮮</li><li data-en="SAFE">安心</li><li data-en="SECURE">安全</li>
       </ul>
     </div>
 
-    <!-- Pure-CSS 3D scene: rotating stack of produce crates -->
     <div class="hero__stage" aria-hidden="true">
       <div class="scene3d" id="heroScene">
         <div class="crate-stack" id="crateStack">
-          <!-- crate -->
           <div class="crate crate--1">
-            <div class="crate__face crate__face--top"></div>
-            <div class="crate__face crate__face--bottom"></div>
-            <div class="crate__face crate__face--front"></div>
-            <div class="crate__face crate__face--back"></div>
-            <div class="crate__face crate__face--left"></div>
-            <div class="crate__face crate__face--right"></div>
-            <div class="crate__produce produce--tomato"></div>
-            <div class="crate__produce produce--lemon"></div>
-            <div class="crate__produce produce--green"></div>
+            <div class="crate__face crate__face--top"></div><div class="crate__face crate__face--bottom"></div>
+            <div class="crate__face crate__face--front"></div><div class="crate__face crate__face--back"></div>
+            <div class="crate__face crate__face--left"></div><div class="crate__face crate__face--right"></div>
+            <div class="crate__produce produce--tomato"></div><div class="crate__produce produce--lemon"></div><div class="crate__produce produce--green"></div>
           </div>
           <div class="crate crate--2">
-            <div class="crate__face crate__face--top"></div>
-            <div class="crate__face crate__face--bottom"></div>
-            <div class="crate__face crate__face--front"></div>
-            <div class="crate__face crate__face--back"></div>
-            <div class="crate__face crate__face--left"></div>
-            <div class="crate__face crate__face--right"></div>
-            <div class="crate__produce produce--orange"></div>
-            <div class="crate__produce produce--green2"></div>
+            <div class="crate__face crate__face--top"></div><div class="crate__face crate__face--bottom"></div>
+            <div class="crate__face crate__face--front"></div><div class="crate__face crate__face--back"></div>
+            <div class="crate__face crate__face--left"></div><div class="crate__face crate__face--right"></div>
+            <div class="crate__produce produce--orange"></div><div class="crate__produce produce--green2"></div>
           </div>
           <div class="crate crate--3">
-            <div class="crate__face crate__face--top"></div>
-            <div class="crate__face crate__face--bottom"></div>
-            <div class="crate__face crate__face--front"></div>
-            <div class="crate__face crate__face--back"></div>
-            <div class="crate__face crate__face--left"></div>
-            <div class="crate__face crate__face--right"></div>
+            <div class="crate__face crate__face--top"></div><div class="crate__face crate__face--bottom"></div>
+            <div class="crate__face crate__face--front"></div><div class="crate__face crate__face--back"></div>
+            <div class="crate__face crate__face--left"></div><div class="crate__face crate__face--right"></div>
             <div class="crate__produce produce--eggplant"></div>
           </div>
-          <!-- floating fruits orbiting the stack -->
           <span class="orbit orbit--a"><i class="fruit fruit--apple"></i></span>
           <span class="orbit orbit--b"><i class="fruit fruit--lime"></i></span>
           <span class="orbit orbit--c"><i class="fruit fruit--berry"></i></span>
@@ -134,11 +117,11 @@
   <!-- ============ ABOUT ============ -->
   <section class="section about" id="about">
     <div class="section__head">
-      <p class="kicker reveal" data-reveal>ABOUT · 組合について</p>
-      <h2 class="reveal" data-reveal data-delay="80">市場の鮮度を、<br class="br-sp">支える土台。</h2>
+      <p class="kicker reveal" data-reveal data-en="ABOUT">ABOUT · 組合について</p>
+      <h2 class="reveal" data-reveal data-delay="80" data-en="The foundation<br class=&quot;br-sp&quot;>beneath market freshness.">市場の鮮度を、<br class="br-sp">支える土台。</h2>
     </div>
     <div class="about__grid">
-      <p class="about__lead reveal" data-reveal data-delay="120">
+      <p class="about__lead reveal" data-reveal data-delay="120" data-en="Sendai Central Market Produce Cooperative exists to circulate the vegetables and fruit handled at Sendai Central Wholesale Market — fresh, safe and secure. From storage and in-market transport to joint delivery, produce processing and fuel, we bundle the functions that keep the market moving and support the region's tables.">
         仙台中央市場青果協同組合は、仙台市中央卸売市場で取り扱われる
         野菜・果実を「新鮮・安心・安全」に流通させるための組合です。
         貯蔵・保管、場内運搬、共同配送、青果物加工、給油まで、
@@ -147,18 +130,18 @@
       <div class="about__cards">
         <article class="glass tilt reveal" data-reveal data-delay="160">
           <div class="glass__icon">❄️</div>
-          <h3>鮮度を守る</h3>
-          <p>適切な温度帯での貯蔵保管により、青果物の鮮度と品質を維持します。</p>
+          <h3 data-en="Keep it fresh">鮮度を守る</h3>
+          <p data-en="Temperature-controlled storage preserves the freshness and quality of produce.">適切な温度帯での貯蔵保管により、青果物の鮮度と品質を維持します。</p>
         </article>
         <article class="glass tilt reveal" data-reveal data-delay="240">
           <div class="glass__icon">🚚</div>
-          <h3>市場を動かす</h3>
-          <p>場内運搬で荷を滞りなく動かし、取引から出荷までをスムーズに。</p>
+          <h3 data-en="Move the market">市場を動かす</h3>
+          <p data-en="In-market transport keeps goods flowing smoothly from trade to dispatch.">場内運搬で荷を滞りなく動かし、取引から出荷までをスムーズに。</p>
         </article>
         <article class="glass tilt reveal" data-reveal data-delay="320">
           <div class="glass__icon">🌱</div>
-          <h3>地域とともに</h3>
-          <p>地元仙台の食流通インフラとして、安定供給に貢献します。</p>
+          <h3 data-en="With the region">地域とともに</h3>
+          <p data-en="As local food infrastructure in Sendai, we support a stable supply.">地元仙台の食流通インフラとして、安定供給に貢献します。</p>
         </article>
       </div>
     </div>
@@ -168,31 +151,23 @@
   <section class="section focus" id="focus">
     <div class="focus__bg" aria-hidden="true"></div>
     <div class="section__head section__head--center">
-      <p class="kicker reveal" data-reveal>BUSINESS 04 · 主要事業</p>
-      <h2 class="reveal" data-reveal data-delay="80">貯蔵保管・<span class="grad">場内運搬</span>事業</h2>
-      <p class="section__sub reveal" data-reveal data-delay="140">
+      <p class="kicker reveal" data-reveal data-en="BUSINESS 04 · CORE">BUSINESS 04 · 主要事業</p>
+      <h2 class="reveal" data-reveal data-delay="80" data-en="Storage &amp; <span class=&quot;grad&quot;>In-Market Transport</span>">貯蔵保管・<span class="grad">場内運搬</span>事業</h2>
+      <p class="section__sub reveal" data-reveal data-delay="140" data-en="Moving produce through the market while holding its freshness.<br class=&quot;br-pc&quot;>Storage and in-market transport are the core of what we do.">
         収穫された青果物の鮮度を保ったまま市場内を動かす。<br class="br-pc">
         当組合のコア機能が、この貯蔵保管と場内運搬です。
       </p>
     </div>
 
     <div class="focus__layout">
-      <!-- 3D isometric cold-storage warehouse -->
       <div class="warehouse reveal" data-reveal data-delay="120" aria-hidden="true">
         <div class="warehouse__scene" id="warehouseScene">
           <div class="iso">
             <div class="iso__floor"></div>
-            <div class="iso__rack iso__rack--1">
-              <span></span><span></span><span></span>
-            </div>
-            <div class="iso__rack iso__rack--2">
-              <span></span><span></span><span></span>
-            </div>
+            <div class="iso__rack iso__rack--1"><span></span><span></span><span></span></div>
+            <div class="iso__rack iso__rack--2"><span></span><span></span><span></span></div>
             <div class="iso__pallet"></div>
-            <div class="iso__forklift">
-              <div class="iso__forklift-body"></div>
-              <div class="iso__forklift-fork"></div>
-            </div>
+            <div class="iso__forklift"><div class="iso__forklift-body"></div><div class="iso__forklift-fork"></div></div>
             <div class="iso__cold"></div>
           </div>
         </div>
@@ -203,29 +178,29 @@
         <li class="feature reveal" data-reveal data-delay="160">
           <span class="feature__no">01</span>
           <div>
-            <h3>温度帯別の貯蔵保管</h3>
-            <p>青果物に適した温度・湿度で保管し、入荷から出荷までの鮮度劣化を最小限に抑えます。</p>
+            <h3 data-en="Temperature-zoned storage">温度帯別の貯蔵保管</h3>
+            <p data-en="We store produce at the right temperature and humidity, minimizing quality loss from arrival to dispatch.">青果物に適した温度・湿度で保管し、入荷から出荷までの鮮度劣化を最小限に抑えます。</p>
           </div>
         </li>
         <li class="feature reveal" data-reveal data-delay="220">
           <span class="feature__no">02</span>
           <div>
-            <h3>スピーディーな場内運搬</h3>
-            <p>セリ場・卸売場・荷捌き場の間を効率よく搬送。取引のテンポを止めません。</p>
+            <h3 data-en="Speedy in-market transport">スピーディーな場内運搬</h3>
+            <p data-en="Efficient transfer between auction floors, wholesale areas and handling zones keeps trading tempo.">セリ場・卸売場・荷捌き場の間を効率よく搬送。取引のテンポを止めません。</p>
           </div>
         </li>
         <li class="feature reveal" data-reveal data-delay="280">
           <span class="feature__no">03</span>
           <div>
-            <h3>荷傷みを防ぐ取り扱い</h3>
-            <p>専用機材と熟練のオペレーションで、デリケートな青果物をていねいに扱います。</p>
+            <h3 data-en="Damage-free handling">荷傷みを防ぐ取り扱い</h3>
+            <p data-en="Dedicated equipment and skilled operators handle delicate produce with care.">専用機材と熟練のオペレーションで、デリケートな青果物をていねいに扱います。</p>
           </div>
         </li>
         <li class="feature reveal" data-reveal data-delay="340">
           <span class="feature__no">04</span>
           <div>
-            <h3>共同配送への接続</h3>
-            <p>保管・運搬から共同配送までを一気通貫。市場の物流をワンストップで支えます。</p>
+            <h3 data-en="Connected to joint delivery">共同配送への接続</h3>
+            <p data-en="From storage and transport straight through to joint delivery — one-stop market logistics.">保管・運搬から共同配送までを一気通貫。市場の物流をワンストップで支えます。</p>
           </div>
         </li>
       </ul>
@@ -235,34 +210,36 @@
   <!-- ============ BUSINESS GRID ============ -->
   <section class="section business" id="business">
     <div class="section__head">
-      <p class="kicker reveal" data-reveal>OUR BUSINESS · 事業内容</p>
-      <h2 class="reveal" data-reveal data-delay="80">市場を支える、<br class="br-sp">4つの事業。</h2>
+      <p class="kicker reveal" data-reveal data-en="OUR BUSINESS">OUR BUSINESS · 事業内容</p>
+      <h2 class="reveal" data-reveal data-delay="80" data-en="Four businesses<br class=&quot;br-sp&quot;>that power the market.">市場を支える、<br class="br-sp">4つの事業。</h2>
     </div>
     <div class="biz-grid">
       <article class="biz-card reveal" data-reveal data-delay="80">
         <div class="biz-card__num">01</div>
-        <h3>共同配送事業</h3>
-        <p>100％出資の子会社（株）仙台中央卸売市場配送センターが運営。約46台の車両で、共同配送・市内混載配送・チャーター便に対応します。</p>
+        <h3 data-en="Joint Delivery">共同配送事業</h3>
+        <p data-en="Run by our wholly owned subsidiary, the Sendai Central Wholesale Market Delivery Center, with roughly 46 vehicles for joint, mixed-load and charter delivery.">100％出資の子会社（株）仙台中央卸売市場配送センターが運営。約46台の車両で、共同配送・市内混載配送・チャーター便に対応します。</p>
         <span class="biz-card__chip">DELIVERY</span>
+        <a class="biz-card__link" href="delivery.html" data-en="Learn more →">詳しく見る →</a>
       </article>
       <article class="biz-card reveal" data-reveal data-delay="160">
         <div class="biz-card__num">02</div>
-        <h3>青果物加工事業</h3>
-        <p>カット・小分け・パッケージなど、ニーズに応じた青果物の加工で、店舗や実需者の手間を軽減します。</p>
+        <h3 data-en="Produce Processing">青果物加工事業</h3>
+        <p data-en="Cutting, portioning and packaging tailored to demand, reducing the workload for stores and buyers.">カット・小分け・パッケージなど、ニーズに応じた青果物の加工で、店舗や実需者の手間を軽減します。</p>
         <span class="biz-card__chip">PROCESSING</span>
       </article>
       <article class="biz-card biz-card--feature reveal" data-reveal data-delay="240">
         <div class="biz-card__num">04</div>
-        <h3>貯蔵保管・場内運搬事業</h3>
-        <p>適切な温度管理での貯蔵保管と、スピーディーな場内運搬。鮮度を守る当組合の中核機能です。</p>
+        <h3 data-en="Storage &amp; In-Market Transport">貯蔵保管・場内運搬事業</h3>
+        <p data-en="Temperature-managed storage and speedy in-market transport — the core function that protects freshness.">適切な温度管理での貯蔵保管と、スピーディーな場内運搬。鮮度を守る当組合の中核機能です。</p>
         <span class="biz-card__chip">STORAGE &amp; LOGISTICS</span>
-        <a class="biz-card__link" href="#focus">詳しく見る →</a>
+        <a class="biz-card__link" href="#focus" data-en="Learn more →">詳しく見る →</a>
       </article>
       <article class="biz-card reveal" data-reveal data-delay="320">
         <div class="biz-card__num">05</div>
-        <h3>給油事業</h3>
-        <p>2019年4月より、組合員車両・市場運営車両・配送車両向けに各種燃料やタイヤ・部品を販売。2021年8月からは天然ガススタンドも運営しています。</p>
+        <h3 data-en="Fuel Service">給油事業</h3>
+        <p data-en="Since April 2019 we supply fuels, tires and parts for member, market and delivery vehicles; a natural-gas station has run since August 2021.">2019年4月より、組合員車両・市場運営車両・配送車両向けに各種燃料やタイヤ・部品を販売。2021年8月からは天然ガススタンドも運営しています。</p>
         <span class="biz-card__chip">ENERGY</span>
+        <a class="biz-card__link" href="fuel.html" data-en="Learn more →">詳しく見る →</a>
       </article>
     </div>
   </section>
@@ -272,19 +249,19 @@
     <div class="stats__inner">
       <div class="stat reveal" data-reveal>
         <span class="stat__num" data-count="46" data-suffix="台">0</span>
-        <span class="stat__label">配送車両</span>
+        <span class="stat__label" data-en="Delivery vehicles">配送車両</span>
       </div>
       <div class="stat reveal" data-reveal data-delay="80">
         <span class="stat__num" data-count="3" data-suffix="つの約束">0</span>
-        <span class="stat__label">新鮮・安心・安全</span>
+        <span class="stat__label" data-en="Fresh · Safe · Secure">新鮮・安心・安全</span>
       </div>
       <div class="stat reveal" data-reveal data-delay="160">
         <span class="stat__num" data-count="4" data-suffix="事業">0</span>
-        <span class="stat__label">市場を支える機能</span>
+        <span class="stat__label" data-en="Functions for the market">市場を支える機能</span>
       </div>
       <div class="stat reveal" data-reveal data-delay="240">
         <span class="stat__num" data-count="365" data-suffix="日">0</span>
-        <span class="stat__label">途切れない物流</span>
+        <span class="stat__label" data-en="Logistics that never stops">途切れない物流</span>
       </div>
     </div>
   </section>
@@ -294,22 +271,22 @@
     <div class="contact__card reveal" data-reveal>
       <div class="contact__glow" aria-hidden="true"></div>
       <p class="kicker">CONTACT</p>
-      <h2>市場の物流のこと、<br class="br-sp">お気軽にご相談ください。</h2>
-      <p class="contact__lead">
+      <h2 data-en="Talk to us about<br class=&quot;br-sp&quot;>market logistics.">市場の物流のこと、<br class="br-sp">お気軽にご相談ください。</h2>
+      <p class="contact__lead" data-en="Storage &amp; in-market transport, joint delivery, produce processing and fuel — Sendai Central Market Produce Cooperative answers it all, in one place.">
         貯蔵保管・場内運搬、共同配送、青果物加工、給油まで。
         仙台中央市場青果協同組合がワンストップでお応えします。
       </p>
       <div class="contact__info">
         <div>
-          <span class="contact__label">所在地</span>
-          <p>宮城県仙台市 中央卸売市場内</p>
+          <span class="contact__label" data-en="Location">所在地</span>
+          <p data-en="Inside Sendai Central Wholesale Market, Sendai, Miyagi">宮城県仙台市 中央卸売市場内</p>
         </div>
         <div>
-          <span class="contact__label">事業</span>
-          <p>貯蔵保管・場内運搬／共同配送／青果物加工／給油</p>
+          <span class="contact__label" data-en="Business">事業</span>
+          <p data-en="Storage &amp; transport / Delivery / Processing / Fuel">貯蔵保管・場内運搬／共同配送／青果物加工／給油</p>
         </div>
       </div>
-      <a class="btn btn--primary btn--lg" href="mailto:info@example.jp">お問い合わせはこちら</a>
+      <a class="btn btn--primary btn--lg" href="mailto:info@example.jp" data-en="Get in touch">お問い合わせはこちら</a>
     </div>
   </section>
 
@@ -320,24 +297,25 @@
     <div class="footer__brand">
       <span class="nav__logo" aria-hidden="true"><svg viewBox="0 0 40 40" width="30" height="30"><use href="#leafmark"/></svg></span>
       <div>
-        <strong>仙台中央市場青果協同組合</strong>
-        <p>新鮮！安心！安全！な青果をお届けします。</p>
+        <strong data-en="Sendai Central Market Produce Cooperative">仙台中央市場青果協同組合</strong>
+        <p data-en="Delivering fresh, safe and secure produce.">新鮮！安心！安全！な青果をお届けします。</p>
       </div>
     </div>
     <nav class="footer__nav" aria-label="フッターメニュー">
-      <a href="#about">組合について</a>
-      <a href="#focus">貯蔵・運搬</a>
-      <a href="#business">事業内容</a>
-      <a href="#contact">お問い合わせ</a>
+      <a href="company.html" data-en="Overview">組合概要</a>
+      <a href="#focus" data-en="Storage &amp; Transport">貯蔵・運搬</a>
+      <a href="delivery.html" data-en="Delivery">共同配送</a>
+      <a href="fuel.html" data-en="Fuel">給油事業</a>
+      <a href="members.html" data-en="Members">組合員</a>
+      <a href="#contact" data-en="Contact">お問い合わせ</a>
     </nav>
   </div>
   <div class="footer__bottom">
     <small>© <span id="year"></span> 仙台中央市場青果協同組合 — Modern redesign concept.</small>
-    <small>Built dependency-free · 3D &amp; scroll motion</small>
+    <small data-en="Built dependency-free · 3D &amp; scroll motion">Built dependency-free · 3D &amp; scroll motion</small>
   </div>
 </footer>
 
-<!-- ===== Shared SVG defs ===== -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <symbol id="leafmark" viewBox="0 0 40 40">
@@ -351,6 +329,7 @@
   </defs>
 </svg>
 
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

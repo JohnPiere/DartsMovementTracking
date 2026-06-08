@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja" data-en-title="Fuel Service ｜ Sendai Central Market Produce Cooperative">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0a1f14" />
+<title>給油事業 ｜ 仙台中央市場青果協同組合</title>
+<meta name="description" content="仙台中央市場青果協同組合の給油事業。2019年4月より組合員車両・市場運営車両・配送車両向けに燃料・タイヤ・部品を販売、2021年8月より天然ガススタンドも運営。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<canvas id="bgCanvas" class="bg-canvas" aria-hidden="true"></canvas>
+<div class="aurora" aria-hidden="true"><span class="aurora__blob aurora__blob--1"></span><span class="aurora__blob aurora__blob--2"></span><span class="aurora__blob aurora__blob--3"></span></div>
+
+<header class="nav" id="nav">
+  <a class="nav__brand" href="index.html#top" aria-label="仙台中央市場青果協同組合 トップへ">
+    <span class="nav__logo" aria-hidden="true"><svg viewBox="0 0 40 40" width="34" height="34"><use href="#leafmark"/></svg></span>
+    <span class="nav__brand-text"><strong data-en="Sendai Central Produce">仙台中央市場青果</strong><small data-en="Cooperative">協同組合</small></span>
+  </a>
+  <nav class="nav__links" aria-label="メインメニュー">
+    <a href="company.html" data-en="Overview">組合概要</a>
+    <a href="index.html#business" data-en="Business">事業内容</a>
+    <a href="delivery.html" data-en="Delivery">共同配送</a>
+    <a href="fuel.html" data-en="Fuel">給油事業</a>
+    <a href="members.html" data-en="Members">組合員</a>
+    <a href="index.html#contact" class="nav__cta" data-en="Contact">お問い合わせ</a>
+    <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch to English">EN</button>
+  </nav>
+  <button class="nav__burger" id="navBurger" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div>
+      <p class="crumbs"><a href="index.html#top">HOME</a> / <span>FUEL</span></p>
+      <p class="page-hero__eyebrow" data-en="BUSINESS 05 · ENERGY">事業 05 · エネルギー</p>
+      <h1 data-en="Fuel <br>Service">給油事業</h1>
+      <p data-en="Since April 2019 we supply fuels, tires and parts for member, market and delivery vehicles. A natural-gas station has been running since August 2021.">2019年4月より、組合員車両・市場運営車両・配送車両向けに各種燃料・タイヤ・部品を販売。2021年8月からは天然ガススタンドも運営しています。</p>
+    </div>
+    <div class="page-hero__art" aria-hidden="true">
+      <div class="motif">
+        <span class="motif__ring motif__ring--1"></span><span class="motif__ring motif__ring--2"></span><span class="motif__ring motif__ring--3"></span>
+        <span class="motif__core">⛽</span>
+        <span class="motif__sat motif__sat--1"></span><span class="motif__sat motif__sat--2"></span><span class="motif__sat motif__sat--3"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head">
+      <p class="kicker reveal" data-reveal data-en="PRODUCTS">PRODUCTS · 取扱商品</p>
+      <h2 class="reveal" data-reveal data-delay="80" data-en="What we supply">取り扱い</h2>
+    </div>
+    <div class="about__cards">
+      <article class="glass reveal" data-reveal data-delay="80"><div class="glass__icon">⛽</div><h3 data-en="Fuels">各種燃料</h3><p data-en="High-grade gasoline, regular gasoline, diesel and kerosene.">ハイグレードガソリン・レギュラー・軽油・灯油。</p></article>
+      <article class="glass reveal" data-reveal data-delay="160"><div class="glass__icon">🛞</div><h3 data-en="Tires &amp; parts">タイヤ・部品</h3><p data-en="Tires and replacement parts to keep vehicles running.">車両を支えるタイヤや交換部品も販売。</p></article>
+      <article class="glass reveal" data-reveal data-delay="240"><div class="glass__icon">🌿</div><h3 data-en="Natural gas">天然ガス</h3><p data-en="A natural-gas station in operation since August 2021.">2021年8月より天然ガススタンドを運営。</p></article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section__head">
+      <p class="kicker reveal" data-reveal data-en="HISTORY">HISTORY · 沿革</p>
+      <h2 class="reveal" data-reveal data-delay="80" data-en="A growing energy business">広がるエネルギー事業</h2>
+    </div>
+    <ol class="timeline reveal" data-reveal data-delay="120">
+      <li><time>2019.04</time><h3 data-en="Fuel service launched">給油事業を開始</h3><p data-en="Began selling high-grade and regular gasoline, diesel and kerosene — plus tires and parts — for member, market-operation and delivery vehicles.">組合員車両・市場運営車両・配送車両向けに、ハイオク／レギュラー／軽油／灯油、タイヤ・部品の販売を開始。</p></li>
+      <li><time>2021.08</time><h3 data-en="Natural-gas station opened">天然ガススタンドを開設</h3><p data-en="Added a natural-gas station, broadening fuel options for the market's vehicles.">天然ガススタンドを開設し、市場車両への燃料供給の選択肢を拡大。</p></li>
+    </ol>
+  </section>
+
+  <section class="section">
+    <div class="section__head">
+      <p class="kicker reveal" data-reveal data-en="FOR WHOM">FOR WHOM · 対象</p>
+      <h2 class="reveal" data-reveal data-delay="80" data-en="Who we fuel">給油の対象</h2>
+    </div>
+    <div class="prose reveal" data-reveal data-delay="120">
+      <p data-en="The fuel service supports the vehicles that keep the market in motion: <strong>member companies' vehicles</strong>, <strong>market-operation vehicles</strong>, and the <strong>delivery fleet</strong>. By fueling on-site, we keep the cooperative's logistics running without interruption.">給油事業は、市場を動かす車両を支えます。<strong>組合員企業の車両</strong>、<strong>市場運営の車両</strong>、そして<strong>配送車両</strong>。市場内で給油できることで、組合の物流を止めることなく動かし続けます。</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__brand"><span class="nav__logo" aria-hidden="true"><svg viewBox="0 0 40 40" width="30" height="30"><use href="#leafmark"/></svg></span>
+      <div><strong data-en="Sendai Central Market Produce Cooperative">仙台中央市場青果協同組合</strong><p data-en="Delivering fresh, safe and secure produce.">新鮮！安心！安全！な青果をお届けします。</p></div></div>
+    <nav class="footer__nav" aria-label="フッターメニュー">
+      <a href="company.html" data-en="Overview">組合概要</a><a href="delivery.html" data-en="Delivery">共同配送</a><a href="fuel.html" data-en="Fuel">給油事業</a><a href="members.html" data-en="Members">組合員</a><a href="index.html#contact" data-en="Contact">お問い合わせ</a>
+    </nav>
+  </div>
+  <div class="footer__bottom"><small>© <span id="year"></span> 仙台中央市場青果協同組合 — Modern redesign concept.</small><small data-en="Built dependency-free · 3D &amp; scroll motion">Built dependency-free · 3D &amp; scroll motion</small></div>
+</footer>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="leafmark" viewBox="0 0 40 40">
+    <path d="M20 3C11 9 6 16 6 25c0 7 5 12 14 12s14-5 14-12C34 16 29 9 20 3Z" fill="url(#lg1)"/>
+    <path d="M20 8c0 12 0 20 0 27" stroke="#0a3d1f" stroke-width="2" fill="none" opacity=".55"/>
+    <path d="M20 18c4-3 7-3 10-2M20 26c-4-3-7-3-10-2" stroke="#0a3d1f" stroke-width="1.6" fill="none" opacity=".45"/>
+    <linearGradient id="lg1" x1="6" y1="3" x2="34" y2="37" gradientUnits="userSpaceOnUse"><stop stop-color="#7CFFB2"/><stop offset="1" stop-color="#16A34A"/></linearGradient>
+  </symbol>
+</defs></svg>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

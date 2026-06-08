@@ -15,12 +15,33 @@ originally `business4.html` on <https://www.ssn.or.jp>.
 - **Accessible** — respects `prefers-reduced-motion`, semantic landmarks.
 - **Zero build step & zero dependencies** — just open the file.
 
+## 📄 Pages
+- `index.html` — home (hero 3D crates, business4 focus, stats, contact)
+- `company.html` — 組合概要 (overview + profile table)
+- `delivery.html` — 共同配送事業 (with 3D truck)
+- `fuel.html` — 給油事業 (with history timeline)
+- `members.html` — 組合員一覧 (member companies)
+
+Every page has a **EN / 日本語 toggle** (top-right of the nav); the choice is
+remembered across pages via `localStorage`.
+
 ## ▶️ How to open (at home)
 Just double-click **`index.html`** — it runs in any modern browser, fully offline.
 
 > Internet only enhances it (Google Fonts); it degrades gracefully to system
 > fonts offline. No npm, no bundler, no server required. To serve it instead:
 > `python3 -m http.server` then open <http://localhost:8000>.
+
+## 📱 View it now from your phone (no PC needed)
+The repo is public, so you can preview the pushed branch instantly:
+
+**htmlpreview** (instant, zero setup):
+```
+https://htmlpreview.github.io/?https://raw.githubusercontent.com/JohnPiere/DartsMovementTracking/claude/modern-website-3d-animations-IOhpQ/sendai-seika-modern/index.html
+```
+
+For a permanent, fast URL, enable GitHub Pages for this content (Settings →
+Pages) or ask me to add a Pages deploy workflow.
 
 ## 📁 Structure
 ```
