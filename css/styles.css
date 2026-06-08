@@ -179,14 +179,39 @@ body::after{ /* subtle grain */
   background-image:repeating-linear-gradient(180deg,rgba(0,0,0,.18) 0 2px,transparent 2px 22px),linear-gradient(160deg,#9c6b3f,#5e3a1e)}
 
 /* produce balls inside the top crate */
-.crate__produce{position:absolute;border-radius:50%;transform-style:preserve-3d;box-shadow:inset -6px -8px 12px rgba(0,0,0,.35)}
+.crate__produce{position:absolute;border-radius:50%;transform-style:preserve-3d;
+  box-shadow:inset -7px -9px 14px rgba(0,0,0,.4),0 6px 12px rgba(0,0,0,.28)}
+.crate__produce::before{content:"";position:absolute;left:22%;top:16%;width:30%;height:24%;
+  border-radius:50%;background:rgba(255,255,255,.55);filter:blur(2px);pointer-events:none}
 .crate--3 .crate__produce,.crate--2 .crate__produce{top:-14px}
-.produce--tomato{width:34px;height:34px;left:30px;background:radial-gradient(circle at 35% 30%,#ff8a8a,var(--tomato));transform:translateZ(40px)}
-.produce--lemon{width:30px;height:30px;left:70px;background:radial-gradient(circle at 35% 30%,#fff08a,var(--citrus));transform:translateZ(20px)}
-.produce--green{width:30px;height:30px;left:100px;background:radial-gradient(circle at 35% 30%,#bff7c0,#3fae5a);transform:translateZ(46px)}
-.produce--orange{width:34px;height:34px;left:40px;background:radial-gradient(circle at 35% 30%,#ffc58a,var(--orange));transform:translateZ(40px)}
-.produce--green2{width:28px;height:28px;left:86px;background:radial-gradient(circle at 35% 30%,#bff7c0,#3fae5a);transform:translateZ(24px)}
-.produce--eggplant{width:30px;height:30px;left:60px;background:radial-gradient(circle at 35% 30%,#c79bff,#6b2fb0);transform:translateZ(40px)}
+/* tomato — red with green calyx leaf */
+.produce--tomato{width:40px;height:37px;left:24px;background:radial-gradient(circle at 36% 30%,#ff8e7d,#e23222 72%);transform:translateZ(42px)}
+.produce--tomato::after{content:"";position:absolute;left:38%;top:-6px;width:24%;height:30%;
+  background:#2faa4e;border-radius:0 60% 0 60%;transform:rotate(-18deg);
+  box-shadow:7px 0 0 -3px #2faa4e,-7px 0 0 -3px #2faa4e}
+/* lemon / citrus */
+.produce--lemon{width:34px;height:31px;left:70px;border-radius:48% 52% 50% 50%/50%;
+  background:radial-gradient(circle at 34% 28%,#fff6a8,#f4c016 76%);transform:translateZ(22px)}
+/* lettuce / cabbage — leafy green with veins */
+.produce--green{width:38px;height:35px;left:98px;background:radial-gradient(circle at 38% 28%,#cdff9e,#3aa83a 74%);transform:translateZ(46px)}
+.produce--green::after{content:"";position:absolute;left:50%;top:40%;width:2px;height:42%;
+  transform:translateX(-1px);background:rgba(8,60,20,.4);
+  box-shadow:9px -7px 0 -1px rgba(8,60,20,.28),-9px -7px 0 -1px rgba(8,60,20,.28),5px 6px 0 -1px rgba(8,60,20,.22)}
+/* orange */
+.produce--orange{width:37px;height:37px;left:36px;background:radial-gradient(circle at 35% 30%,#ffd592,#ff7a17 73%);transform:translateZ(40px)}
+.produce--orange::after{content:"";position:absolute;left:43%;top:-4px;width:16%;height:22%;background:#2faa4e;border-radius:50% 50% 0 0}
+/* broccoli — bumpy florets */
+.produce--green2{width:34px;height:33px;left:84px;
+  background:radial-gradient(circle at 72% 38%,#88d860 17%,transparent 18%),
+             radial-gradient(circle at 40% 68%,#88d860 15%,transparent 16%),
+             radial-gradient(circle at 60% 72%,#7fce55 13%,transparent 14%),
+             radial-gradient(circle at 30% 30%,#a6e86a,#2f8f3a 72%);
+  transform:translateZ(24px)}
+/* eggplant — purple, taller, with stem */
+.produce--eggplant{width:27px;height:40px;left:60px;border-radius:50%/40% 40% 60% 60%;
+  background:radial-gradient(circle at 36% 24%,#b681ff,#531a96 74%);transform:translateZ(42px)}
+.produce--eggplant::after{content:"";position:absolute;left:36%;top:-5px;width:26%;height:26%;
+  background:#3f8f4e;border-radius:50% 50% 0 0;transform:rotate(8deg)}
 
 /* orbiting fruits */
 .orbit{position:absolute;left:50%;top:50%;transform-style:preserve-3d}
@@ -194,9 +219,11 @@ body::after{ /* subtle grain */
 .orbit--b{animation:orbit 16s linear infinite reverse}
 .orbit--c{animation:orbit 20s linear infinite}
 @keyframes orbit{to{transform:rotateY(360deg)}}
-.fruit{position:absolute;display:block;width:26px;height:26px;border-radius:50%;box-shadow:inset -5px -6px 10px rgba(0,0,0,.35),0 8px 16px rgba(0,0,0,.3)}
-.fruit--apple{transform:translateX(180px) translateY(-40px);background:radial-gradient(circle at 35% 30%,#ff9a9a,var(--tomato))}
-.fruit--lime{transform:translateX(-190px) translateY(40px);background:radial-gradient(circle at 35% 30%,#d7ff8a,#4cae2f)}
+.fruit{position:absolute;display:block;width:28px;height:28px;border-radius:50%;box-shadow:inset -5px -6px 10px rgba(0,0,0,.35),0 8px 16px rgba(0,0,0,.3)}
+.fruit::before{content:"";position:absolute;left:24%;top:18%;width:26%;height:22%;border-radius:50%;background:rgba(255,255,255,.5);filter:blur(1.5px)}
+.fruit--apple{transform:translateX(180px) translateY(-40px);background:radial-gradient(circle at 35% 28%,#ff9a9a,#d62f3f 72%)}
+.fruit--apple::after{content:"";position:absolute;left:46%;top:-5px;width:14%;height:24%;background:#7a4a1e;border-radius:2px}
+.fruit--lime{transform:translateX(-190px) translateY(40px);background:radial-gradient(circle at 35% 30%,#d7ff8a,#4cae2f 74%)}
 .fruit--berry{transform:translateX(160px) translateY(90px);background:radial-gradient(circle at 35% 30%,#d6a8ff,var(--berry))}
 
 /* ---------- Marquee ---------- */
@@ -418,28 +445,85 @@ body::after{ /* subtle grain */
 .note{margin-top:24px;padding:16px 20px;border-radius:14px;background:rgba(255,210,63,.08);
   border:1px solid rgba(255,210,63,.25);color:var(--ink-dim);font-size:13.5px}
 
-/* 3D truck (delivery page) */
-.truck-stage{position:relative;width:260px;height:200px;transform-style:preserve-3d;perspective:900px}
-.truck{position:relative;width:200px;height:90px;transform-style:preserve-3d;margin:60px auto 0;
-  transform:rotateX(-12deg) rotateY(-26deg);animation:floaty 6s var(--ease) infinite alternate}
-.truck__cab,.truck__box{position:absolute;transform-style:preserve-3d}
-.truck__box{left:0;width:120px;height:70px}
-.truck__box .s{position:absolute;border:2px solid rgba(255,255,255,.18)}
-.truck__box .s.f{width:120px;height:70px;transform:translateZ(30px);background:linear-gradient(160deg,#eef4ef,#cfdbd2)}
-.truck__box .s.b{width:120px;height:70px;transform:translateZ(-30px);background:linear-gradient(160deg,#cfdbd2,#aebbb1)}
-.truck__box .s.l{width:60px;height:70px;left:30px;transform:rotateY(-90deg) translateZ(30px);background:#9fb0a5}
-.truck__box .s.r{width:60px;height:70px;left:30px;transform:rotateY(90deg) translateZ(90px);background:#b6c6bb}
-.truck__box .s.t{width:120px;height:60px;top:5px;transform:rotateX(90deg) translateZ(35px);background:#e3ece6}
-.truck__cab{left:118px;top:24px;width:60px;height:46px}
-.truck__cab .s{position:absolute;border:2px solid rgba(0,0,0,.2)}
-.truck__cab .s.f{width:60px;height:46px;transform:translateZ(30px);background:linear-gradient(160deg,#7cffb2,#16a34a)}
-.truck__cab .s.r{width:60px;height:46px;left:0;transform:rotateY(90deg) translateZ(60px);background:#0f7a39}
-.truck__cab .s.t{width:60px;height:60px;top:-7px;transform:rotateX(90deg) translateZ(23px);background:#9affc4}
-.truck__wheel{position:absolute;bottom:-14px;width:26px;height:26px;border-radius:50%;background:#1a1a1a;
-  border:5px solid #444;transform:translateZ(30px)}
-.truck__wheel.w2{transform:translateZ(-30px)}
-.truck__wheel.a{left:18px}.truck__wheel.b{left:130px}
-.truck__wheel.a2{left:18px}.truck__wheel.b2{left:130px}
+/* =========================================================
+   Scroll-driven 3D box truck (delivery page)
+   --turn (rig rotateY) and --door (0..1 rear doors) set by JS.
+   --fit scales the rig so it never overflows on small screens.
+   ========================================================= */
+.truckscene__viewport{position:relative;width:100%;overflow:hidden;display:grid;place-items:center;
+  min-height:clamp(300px,46vh,460px);perspective:1300px;perspective-origin:50% 42%}
+.truck3d__shadow{position:absolute;left:50%;bottom:13%;width:min(62%,360px);height:34px;transform:translateX(-50%);
+  background:radial-gradient(ellipse,rgba(0,0,0,.5),transparent 70%);filter:blur(7px)}
+.truck3d__float{transform-style:preserve-3d;animation:truckFloat 7s var(--ease) infinite alternate}
+@keyframes truckFloat{to{transform:translateY(-14px)}}
+.truck3d{position:relative;width:0;height:0;transform-style:preserve-3d;--fit:1;
+  transform:rotateX(-14deg) rotateY(var(--turn,-55deg)) scale(var(--fit,1));will-change:transform}
+
+.t-face{position:absolute;left:50%;top:50%;border:2px solid rgba(255,255,255,.14);backface-visibility:visible}
+
+/* cargo box: W170 x H120 x L230 (rear open) */
+.t-box{box-shadow:inset 0 0 40px rgba(0,0,0,.22)}
+.t-box--left {width:230px;height:120px;margin:-60px 0 0 -115px;transform:rotateY(-90deg) translateZ(85px);background:linear-gradient(160deg,#eef5f0,#b9c7bc)}
+.t-box--right{width:230px;height:120px;margin:-60px 0 0 -115px;transform:rotateY(90deg) translateZ(85px);background:linear-gradient(160deg,#dce7df,#a9b8ad)}
+.t-box--top  {width:170px;height:230px;margin:-115px 0 0 -85px;transform:rotateX(90deg) translateZ(60px);background:linear-gradient(160deg,#f6faf6,#d3ded6)}
+.t-box--bottom{width:170px;height:230px;margin:-115px 0 0 -85px;transform:rotateX(-90deg) translateZ(60px);background:#4f5b53}
+.t-box--front{width:170px;height:120px;margin:-60px 0 0 -85px;transform:translateZ(-115px);background:linear-gradient(160deg,#2a382f,#16201a)}
+/* side livery stripe */
+.t-box--left::after,.t-box--right::after{content:"新鮮便";position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);
+  text-align:center;font-family:var(--font-jp);font-weight:900;font-size:26px;letter-spacing:.2em;
+  color:#16a34a;opacity:.85}
+.t-box--right::after{transform:translateY(-50%) scaleX(-1)}
+
+/* interior crates, seen through the open rear */
+.t-inside{position:absolute;left:50%;top:50%;transform-style:preserve-3d}
+.t-icrate{position:absolute;left:50%;top:50%;width:80px;height:54px;margin:-27px 0 0 -40px;
+  border:2px solid rgba(0,0,0,.4);box-shadow:inset 0 0 18px rgba(0,0,0,.5);
+  background:repeating-linear-gradient(90deg,#6f4626 0 3px,#8a5c33 3px 18px)}
+.t-icrate::before{content:"";position:absolute;left:9px;top:-9px;width:20px;height:20px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#ff9a8a,#e23222)}
+.t-icrate::after{content:"";position:absolute;right:9px;top:-8px;width:18px;height:18px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#bdf39a,#3aa83a)}
+.t-icrate--tl{transform:translate3d(-41px,-30px,96px)}
+.t-icrate--tr{transform:translate3d(41px,-30px,96px)}
+.t-icrate--bl{transform:translate3d(-41px,28px,80px)}
+.t-icrate--br{transform:translate3d(41px,28px,80px)}
+
+/* rear doors — hinged on the rear side edges */
+.t-hinge{position:absolute;left:50%;top:50%;transform-style:preserve-3d}
+.t-hinge--r{transform:translate3d(85px,0,115px) rotateY(calc(var(--door,0) * -118deg))}
+.t-hinge--l{transform:translate3d(-85px,0,115px) rotateY(calc(var(--door,0) * 118deg))}
+.t-door{position:absolute;left:0;top:0;width:85px;height:120px;margin-top:-60px;
+  border:2px solid rgba(0,0,0,.3);background:linear-gradient(150deg,#e7efe9,#aebcb0);
+  backface-visibility:visible;box-shadow:inset 0 0 22px rgba(0,0,0,.18)}
+.t-hinge--r .t-door{margin-left:-85px}
+.t-hinge--l .t-door{margin-left:0}
+.t-door::after{content:"";position:absolute;top:44%;width:6px;height:28px;border-radius:3px;background:#5a6b60}
+.t-hinge--r .t-door::after{left:7px}
+.t-hinge--l .t-door::after{right:7px}
+
+/* cab — green, at the front */
+.t-cab{position:absolute;left:50%;top:50%;transform-style:preserve-3d;transform:translate3d(0,14px,-151px)}
+.t-cab .t-face{border-color:rgba(0,0,0,.2)}
+.t-cab__front{width:160px;height:92px;margin:-46px 0 0 -80px;transform:translateZ(-36px);background:linear-gradient(160deg,#7cffb2,#12923f)}
+.t-cab__front::after{content:"";position:absolute;left:14%;top:14%;width:72%;height:42%;border-radius:6px;
+  background:linear-gradient(160deg,#0d2f1c,#06160d);box-shadow:inset 0 0 12px rgba(120,200,255,.25)}
+.t-cab__top{width:160px;height:72px;margin:-36px 0 0 -80px;transform:rotateX(90deg) translateZ(46px);background:linear-gradient(160deg,#9affc4,#37c777)}
+.t-cab__left{width:72px;height:92px;margin:-46px 0 0 -36px;transform:rotateY(-90deg) translateZ(80px);background:linear-gradient(160deg,#16a34a,#0c5f2c)}
+.t-cab__right{width:72px;height:92px;margin:-46px 0 0 -36px;transform:rotateY(90deg) translateZ(80px);background:linear-gradient(160deg,#16a34a,#0c5f2c)}
+
+/* wheels */
+.t-wheel{position:absolute;left:50%;top:50%;width:48px;height:48px;margin:-24px;border-radius:50%;
+  background:radial-gradient(circle at 42% 40%,#3a4047,#0c0e11 68%);border:5px solid #15181c}
+.t-wheel::after{content:"";position:absolute;inset:32%;border-radius:50%;background:radial-gradient(circle at 40% 40%,#9aa3ac,#4a525a)}
+.t-wheel--fr{transform:translate3d(86px,62px,-110px) rotateY(90deg)}
+.t-wheel--rr{transform:translate3d(86px,62px,88px) rotateY(90deg)}
+.t-wheel--fl{transform:translate3d(-86px,62px,-110px) rotateY(90deg)}
+.t-wheel--rl{transform:translate3d(-86px,62px,88px) rotateY(90deg)}
+
+.truckscene__hint{margin-top:18px;text-align:center;font-family:var(--font-en);font-size:11px;
+  letter-spacing:.28em;color:var(--ink-dim)}
+@media(max-width:620px){.truck3d{--fit:.72}}
+@media(max-width:420px){.truck3d{--fit:.6}}
 
 @media(max-width:900px){
   .page-hero{grid-template-columns:1fr;text-align:center}

@@ -138,6 +138,42 @@
     });
   }
 
+  /* ---------- 3D truck scroll choreography (delivery page) ----------
+     The truck turns to face the viewer, then its rear doors swing open. */
+  const truck3d = document.getElementById("truck3d");
+  const truckScene = document.getElementById("truckScene");
+  const clamp01 = (v) => (v < 0 ? 0 : v > 1 ? 1 : v);
+  const smooth = (t) => t * t * (3 - 2 * t); // smoothstep
+
+  const fitTruck = () => {
+    if (!truck3d) return;
+    const vw = document.documentElement.clientWidth;
+    // keep the rig inside the viewport on any screen
+    const fit = Math.min(1, Math.max(0.5, (vw - 40) / 440));
+    truck3d.style.setProperty("--fit", fit.toFixed(3));
+  };
+
+  const updateTruck = () => {
+    if (!truck3d || !truckScene) return;
+    const r = truckScene.getBoundingClientRect();
+    const vh = window.innerHeight || document.documentElement.clientHeight;
+    const p = clamp01((vh - r.top) / (vh + r.height * 0.6));
+    const turn = -60 + smooth(clamp01(p / 0.6)) * 78; // -60deg → +18deg
+    const door = smooth(clamp01((p - 0.52) / 0.42)); // open in the second half
+    truck3d.style.setProperty("--turn", turn.toFixed(2) + "deg");
+    truck3d.style.setProperty("--door", door.toFixed(3));
+  };
+
+  if (truck3d) {
+    fitTruck();
+    if (prefersReduced) {
+      // a pleasant static pose: angled, doors part-open
+      truck3d.style.setProperty("--turn", "12deg");
+      truck3d.style.setProperty("--door", "0.55");
+    }
+    window.addEventListener("resize", fitTruck);
+  }
+
   /* ---------- Scroll-driven parallax on focus warehouse ---------- */
   const onScroll = () => {
     updateProgress();
@@ -148,6 +184,7 @@
       const off = (center - window.innerHeight / 2) / window.innerHeight; // ~ -1..1
       warehouse.style.transform = `translateY(${off * -24}px)`;
     }
+    if (!prefersReduced) updateTruck();
   };
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();

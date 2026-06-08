@@ -43,15 +43,57 @@
       <p data-en="Run by our wholly owned subsidiary, the Sendai Central Wholesale Market Delivery Center, with about 46 vehicles serving joint, mixed-load and charter delivery.">100％出資の子会社（株）仙台中央卸売市場配送センターが運営。約46台の車両で、共同配送・市内混載配送・チャーター便に対応します。</p>
     </div>
     <div class="page-hero__art" aria-hidden="true">
-      <div class="truck-stage">
-        <div class="truck">
-          <div class="truck__box"><span class="s f"></span><span class="s b"></span><span class="s l"></span><span class="s r"></span><span class="s t"></span></div>
-          <div class="truck__cab"><span class="s f"></span><span class="s r"></span><span class="s t"></span></div>
-          <span class="truck__wheel a"></span><span class="truck__wheel b"></span>
-          <span class="truck__wheel w2 a2"></span><span class="truck__wheel w2 b2"></span>
+      <div class="motif">
+        <span class="motif__ring motif__ring--1"></span><span class="motif__ring motif__ring--2"></span><span class="motif__ring motif__ring--3"></span>
+        <span class="motif__core">🚚</span>
+        <span class="motif__sat motif__sat--1"></span><span class="motif__sat motif__sat--2"></span><span class="motif__sat motif__sat--3"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scroll-driven 3D truck: turns to face you, rear doors open, crates inside -->
+  <section class="section truckscene" id="truckScene">
+    <div class="section__head section__head--center">
+      <p class="kicker reveal" data-reveal data-en="SCROLL TO OPEN">SCROLL · 荷台を開く</p>
+      <h2 class="reveal" data-reveal data-delay="80" data-en="Scroll — the truck turns &amp; opens up">スクロールでトラックが<br class="br-sp">振り向き、荷台が開く</h2>
+      <p class="section__sub reveal" data-reveal data-delay="140" data-en="As you scroll, the delivery truck turns to face you and its rear doors swing open, revealing the crates of fresh produce inside.">スクロールに合わせて配送トラックがこちらを向き、リアドアが開いて、中の新鮮な青果クレートが現れます。</p>
+    </div>
+    <div class="truckscene__viewport">
+      <div class="truck3d__shadow"></div>
+      <div class="truck3d__float">
+        <div class="truck3d" id="truck3d" aria-hidden="true">
+          <!-- cargo box (rear is open) -->
+          <div class="t-face t-box t-box--left"></div>
+          <div class="t-face t-box t-box--right"></div>
+          <div class="t-face t-box t-box--top"></div>
+          <div class="t-face t-box t-box--bottom"></div>
+          <div class="t-face t-box t-box--front"></div>
+          <!-- crates inside, visible through the open rear -->
+          <div class="t-inside">
+            <div class="t-icrate t-icrate--tl"></div>
+            <div class="t-icrate t-icrate--tr"></div>
+            <div class="t-icrate t-icrate--bl"></div>
+            <div class="t-icrate t-icrate--br"></div>
+          </div>
+          <!-- rear doors -->
+          <div class="t-hinge t-hinge--l"><div class="t-door"></div></div>
+          <div class="t-hinge t-hinge--r"><div class="t-door"></div></div>
+          <!-- cab -->
+          <div class="t-cab">
+            <div class="t-face t-cab__front"></div>
+            <div class="t-face t-cab__top"></div>
+            <div class="t-face t-cab__left"></div>
+            <div class="t-face t-cab__right"></div>
+          </div>
+          <!-- wheels -->
+          <span class="t-wheel t-wheel--fr"></span>
+          <span class="t-wheel t-wheel--rr"></span>
+          <span class="t-wheel t-wheel--fl"></span>
+          <span class="t-wheel t-wheel--rl"></span>
         </div>
       </div>
     </div>
+    <p class="truckscene__hint" data-en="↑ scroll up &amp; down to drive the animation">↑ スクロールで動きます</p>
   </section>
 
   <section class="section stats">
